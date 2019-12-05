@@ -375,7 +375,7 @@ uint8_t IsoTp::send(Message_t* msg)
 #endif
                                      }
                                      msg->seq_id++;
-                                     msg->seq_id %= 16;
+                                     msg->seq_id %= msg->blocksize;;
                                      msg->Buffer+=7;
                                      msg->len-=7;
 #ifdef ISO_TP_DEBUG
